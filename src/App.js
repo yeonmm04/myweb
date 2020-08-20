@@ -18,15 +18,14 @@ function Login(){
 class Login extends React.Compnent{
 constructor(){
   super()
-  this.state = (id : "없지렁")
+  this.state = {id : "없지렁"}
 }
   render(){
     return(
         <div>
         <Input onchange = { (e) => this.setstate({id : e.target.value }) }/>
-        <Button value = {this.state.id} onClick = { (e) => {
-          console.log(e)
-          alert(e.target.value)
+        <Button value = {this.state.id} onClick = { (event) => {
+          alert(event.target.value)
         } }> Login </Button>
         </div>
 )
